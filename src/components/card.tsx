@@ -22,6 +22,7 @@ export function CardContent({ children, className, ...props }: CardContentProps)
       {...props}
     >
       {children}
+      
     </div>
   )
 }

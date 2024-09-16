@@ -1,11 +1,14 @@
+'use client'
 import { Button } from "@/components/button"
 import { Card, CardContent } from "@/components/card"
+import { SectionGoogle } from "@/components/section-google"
 import { SlideCustomers } from "@/components/slide-customers"
 import { WppButton } from "@/components/wpp-button"
+import { sendMensage, sendWhatsAppMessage } from "@/lib/actions"
 import { batterys } from "@/lib/batterys"
-import { Zap, Shield, ThumbsUp, Star } from "lucide-react"
+import { WhatsappLogo } from "@phosphor-icons/react"
+import { Zap, Shield, ThumbsUp } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function LandingPage() {
   return (
@@ -46,6 +49,27 @@ export default function LandingPage() {
           </div>
           <WppButton />
         </section>
+
+        <section className="py-10 container mx-auto px-3 md:px-20 flex justify-center">
+          <div className="bg-bottom bg-cover md:bg-top bg-no-repeat max-w-[1120px] w-full h-[700px] bg-[url('../../public/images/banners/banner-mobile.png')] md:bg-[url('../../public/images/banners/banner-desktop.png')] rounded-3xl flex md:h-[500px] items-start justify-center md:items-center md:justify-end shadow-lg">
+            <div className="md:w-1/2 h-1/2 w-full md:h-full flex flex-col gap-10 items-start justify-center px-10 pt-10 md:pt-0">
+              <p className="text-zinc-50 font-bold text-4xl md:text-5xl">PRECISA DE UMA <span className="text-green-500">BATERIA</span> AGORA?</p>
+              <span className="text-zinc-300 text-lg md:text-xl">Estamos prontos para te atender, entre em contato agora mesmo.</span>
+              <a
+                onClick={() =>
+                  sendMensage()
+                }
+                className="cursor-pointer shadow-lg hover:shadow-inner hover:shadow-zinc-800 flex items-center justify-center gap-2 text-sm sm:text-base bg-green-600 hover:bg-green-600/95 transition-all font-bold text-zinc-50 py-3 px-5 rounded-full"
+              >
+                <p className="font-bold">
+                  Pedir Agora Mesmo
+                </p>
+                <WhatsappLogo className="size-5 font-bold" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="products" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
@@ -68,17 +92,23 @@ export default function LandingPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{items.title}</h3>
                     {/* <p className="text-gray-600 mb-4">{items.text}</p> */}
-                    <Button className="w-full">Saiba Mais</Button>
+                    <Button
+                      className="w-full px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-offset-2"
+                      onClick={() => sendWhatsAppMessage(items.msg || 'Olá, estou interessado em saber mais sobre este produto!')}
+                    >
+                      Pedir agora!
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
+            <WppButton />
           </div>
         </section>
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
+          <div className="container px-4 md:px-6 mx-auto ">
+            <div className="flex gap-8 items-center justify-around flex-col md:flex-row ">
+              <div className="w-full md:w-1/2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
                   Sobre a Rico Marcas
                 </h2>
@@ -91,15 +121,36 @@ export default function LandingPage() {
                   que nossos clientes tenham acesso às melhores soluções em energia automotiva.
                 </p>
               </div>
-              <div className="flex justify-center w-32 relative">
+              <div className="flex justify-center w-full md:w-1/3 h-[550px] relative overflow-hidden rounded-xl shadow-xl">
                 <Image
-                  src="/image/logo/logo.png"
+                  src="/images/faixada.jpg"
                   alt="Rico Marcas Fábrica"
                   className=" object-cover"
+                  quality={100}
+                  priority
                   fill
                 />
               </div>
             </div>
+            <section className="py-10 container mx-auto px-3 md:px-20 flex justify-center mt-44">
+              <div className="bg-bottom bg-cover md:bg-top bg-no-repeat max-w-[1120px] w-full h-[700px] bg-[url('../../public/images/banners/banner-mobile.png')] md:bg-[url('../../public/images/banners/banner-desktop.png')] rounded-3xl flex md:h-[500px] items-start justify-center md:items-center md:justify-end shadow-lg">
+                <div className="md:w-1/2 h-1/2 w-full md:h-full flex flex-col gap-10 items-start justify-center px-10 pt-10 md:pt-0">
+                  <p className="text-zinc-50 font-bold text-4xl md:text-5xl">PRECISA DE UMA <span className="text-green-500">BATERIA</span> AGORA?</p>
+                  <span className="text-zinc-300 text-lg md:text-xl">Estamos prontos para te atender, entre em contato agora mesmo.</span>
+                  <a
+                    onClick={() =>
+                      sendMensage()
+                    }
+                    className="cursor-pointer shadow-lg hover:shadow-inner hover:shadow-zinc-800 flex items-center justify-center gap-2 text-sm sm:text-base bg-green-600 hover:bg-green-600/95 transition-all font-bold text-zinc-50 py-3 px-5 rounded-full"
+                  >
+                    <p className="font-bold">
+                      Pedir Agora Mesmo
+                    </p>
+                    <WhatsappLogo className="size-5 font-bold" />
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -107,47 +158,10 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               O que nossos clientes dizem
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
-                <Card key={i}>
-                  <CardContent className="p-6">
-                    <div className="flex mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="text-gray-600 mb-4">
-                      A bateria da Rico Marcas superou todas as minhas expectativas. Excelente durabilidade e desempenho!
-                    </p>
-                    <p className="font-bold">Cliente {i}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
-        </section>
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-          <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              Entre em Contato
-            </h2>
-            <div className="max-w-md mx-auto">
-
-            </div>
-          </div>
+          <SectionGoogle />
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500">© 2023 Rico Marcas. Todos os direitos reservados.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Termos de Serviço
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacidade
-          </Link>
-        </nav>
-      </footer>
     </div>
   )
 }
