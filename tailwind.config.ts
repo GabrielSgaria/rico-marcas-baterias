@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'desktop-banner': "url(/images/banners/desktop.png)",
+        'mobile-banner': "url(/images/banners/mobile.png)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
