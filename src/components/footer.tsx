@@ -61,20 +61,20 @@ export function Footer() {
                         <nav className="md:flex grow justify-center">
                             <div className={`mt-8 flex flex-col gap-4 text-center sm:items-start sm:justify-start`}>
                                 <button className="hover:underline hover:border-zinc-100 h-6 transition-all duration-200 text-zinc-50 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("start")}>
+                                    onClick={() => scrollToSection("initial")}>
                                     Inicio
+                                </button>
+                                <button className="hover:underline hover:border-zinc-100 h-6 transition-all duration-200 text-zinc-50 font-semibold text-base uppercase px-2"
+                                    onClick={() => scrollToSection("products")}>
+                                    Produtos
                                 </button>
                                 <button className="hover:underline hover:border-zinc-100 h-6 transition-all duration-200 text-zinc-50 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("contact")}>
                                     Contato
                                 </button>
                                 <button className="hover:underline hover:border-zinc-100 h-6 transition-all duration-200 text-zinc-50 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("location")}>
-                                    Localização
-                                </button>
-                                <button className="hover:underline hover:border-zinc-100 h-6 transition-all duration-200 text-zinc-50 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("batterys")}>
-                                    Baterias
+                                    onClick={() => scrollToSection("feedbacks")}>
+                                    Feedback
                                 </button>
                             </div>
                         </nav>

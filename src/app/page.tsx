@@ -12,7 +12,7 @@ import Image from "next/image"
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen w-full mx-auto ">
+    <div className="flex flex-col min-h-screen w-full mx-auto " id="initial">
 
       <main className="flex-1">
         <section className="bg-cover sm:pt-0 bg-mobile-banner md:bg-desktop-banner min-h-[750px] md:min-h-[273px] lg:min-h-[290px] xl:min-h-[390px] 2xl:min-h-[450px] bg-no-repeat bg-center w-full bg-blue-600 sm:bg-zinc-50" />
@@ -91,7 +91,7 @@ export default function LandingPage() {
                       />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{items.title}</h3>
-                    {/* <p className="text-gray-600 mb-4">{items.text}</p> */}
+                    <p className="text-gray-600 mb-4 text-center">{items.text}</p>
                     <Button
                       className="w-full px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-offset-2"
                       onClick={() => sendWhatsAppMessage(items.msg || 'Olá, estou interessado em saber mais sobre este produto!')}
@@ -123,7 +123,7 @@ export default function LandingPage() {
               </div>
               <div className="flex justify-center w-full md:w-1/3 h-[550px] relative overflow-hidden rounded-xl shadow-xl">
                 <Image
-                  src="/images/faixada.jpg"
+                  src="/images/faixada.jpeg"
                   alt="Rico Marcas Fábrica"
                   className=" object-cover"
                   quality={100}
@@ -153,7 +153,7 @@ export default function LandingPage() {
             </section>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32" id="feedbacks">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               O que nossos clientes dizem

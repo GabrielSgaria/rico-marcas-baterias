@@ -21,7 +21,7 @@ export function NavBar() {
                 <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
                     Quem somos
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="#feedbacks">
                     Feedback
                 </Link>
                 <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
