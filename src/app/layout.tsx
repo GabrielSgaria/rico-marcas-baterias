@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/public/images/logo/logo.png',
+        url: 'https://us-west-2.graphassets.com/cm19fu0i602sv08n209yv0k5i/cm19ksa6g8ab408mwporpv51w',
         width: 1200,
         height: 630,
       }
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   keywords: [
     "baterias automotivas", "baterias para carro", "troca de bateria", "instalação de bateria", "bateria para moto",
     "bateria automotiva com entrega", "loja de baterias", "melhor bateria para carro", "baterias de qualidade", "serviço de bateria",
-    "batria pinhais", "baterias moura"
+    "bateria pinhais", "baterias moura", "baterias em pinhais", "promoção de baterias em pinhais", "bateria pinhais"
   ],
 };
 
