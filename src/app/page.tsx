@@ -113,7 +113,7 @@ export default function LandingPage() {
                   Sobre a Rico Marcas
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  Há mais de 20 anos, a Rico Marcas tem sido sinônimo de qualidade e inovação no mercado de baterias automotivas.
+                  Desde 2009, a Rico Marcas tem sido sinônimo de qualidade e inovação no mercado de baterias automotivas.
                   Nossa missão é fornecer produtos de alta performance que atendam às necessidades dos motoristas mais exigentes.
                 </p>
                 <p className="text-gray-600">

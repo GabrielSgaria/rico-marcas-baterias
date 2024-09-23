@@ -9,17 +9,17 @@ type Battery = {
 export const batterys: Battery[] = [
     {
         id: 1,
-        title: "Bateria Zetta",
-        text: "A Bateria Zetta oferece alto desempenho e durabilidade excepcional para todos os tipos de veículos.",
-        image: '/images/batterys/1.png',
-        msg: "Olá, encontrei a Bateria Zetta no site e fiquei interessado. Gostaria de saber mais detalhes."
+        title: "Bateria Moura Start-Stop AGM",
+        text: "As baterias AGM têm algumas características que as diferenciam das baterias comuns, como: Absorção total da solução ácida (eletrólito) em seus separadores, Resistência interna baixa, Menor queda de tensão em descarga, Maior tensão nos terminais, Maior nível de autonomia. ",
+        image: '/images/batterys/7.png',
+        msg: ""
     },
     {
         id: 2,
-        title: "Bateria Moura Estacionária",
-        text: "A Bateria Moura Estacionária é projetada para oferecer alta durabilidade e desempenho em sistemas de backup de energia.",
+        title: "Bateria Moura Start-Stop EFB",
+        text: "As baterias EFB são ideais para veículos que precisam de cargas rápidas para dar várias partidas ao longo do mesmo trajeto, como aplicativos de Uber.",
         image: '/images/batterys/3.webp',
-        msg: "Gostei da Bateria Moura Estacionária que vi no site. Poderiam me fornecer mais detalhes?"
+        msg: "Gostei da Bateria Moura Start-Stop que vi no site. Poderiam me fornecer mais detalhes?"
     },
     {
         id: 3,
@@ -46,7 +46,14 @@ export const batterys: Battery[] = [
         id: 6,
         title: "Bateria Heliar",
         text: "A Bateria Heliar é sinônimo de confiabilidade, com excelente desempenho em qualquer situação.",
-        image: '/images/batterys/5.png',
+        image: '/images/batterys/5.jpg',
         msg: "Olá, vi a Bateria Heliar no site e me interessei. Poderiam me passar mais informações?"
+    },
+    {
+        id: 7,
+        title: "Bateria Zetta",
+        text: "A Bateria Zetta oferece alto desempenho e durabilidade excepcional para todos os tipos de veículos.",
+        image: '/images/batterys/1.png',
+        msg: "Olá, encontrei a Bateria Zetta no site e fiquei interessado. Gostaria de saber mais detalhes."
     },
 ];

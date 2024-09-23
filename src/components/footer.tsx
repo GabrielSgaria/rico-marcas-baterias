@@ -45,6 +45,16 @@ export function Footer() {
                                     R. Emma Rohrsetzer, 1061 - Emiliano Perneta, Pinhais - PR.
                                 </p>
                             </Link>
+                            <Link
+                                target="blank"
+                                href="https://maps.app.goo.gl/VCd3VqyjBXz6NxEV6"
+                                className="flex cursor-pointer justify-start items-start gap-1 text-zinc-5 mt-10 md:mt-5  text-zinc-50"
+                            >
+                                <MapPin className="size-6" />
+                                <p className="h-6 font-semibold transition-all duration-500 hover:underline hover:border-zinc-100 max-w-[220px] md:max-w-[350px] text-start">
+                                    R. Filipinas, 105 - Centenário, Curitiba - PR.
+                                </p>
+                            </Link>
                         </div>
                     </div>
 
