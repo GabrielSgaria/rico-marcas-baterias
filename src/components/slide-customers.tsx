@@ -75,16 +75,6 @@ export function SlideCustomers() {
                         className="w-24 max-w-24 md:w-24 md:max-w-24 "
                     />
                 </SplideSlide>
-                <SplideSlide className="flex items-center">
-                    <Image
-                        width={900}
-                        height={900}
-                        quality={100}
-                        alt=""
-                        src="/images/suppliers/eltran.png"
-                        className="w-24 max-w-24 md:w-24 md:max-w-24 "
-                    />
-                </SplideSlide>
             </Splide>
         </div>
 
