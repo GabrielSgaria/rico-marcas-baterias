@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "../components/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-zinc-950 bg-zinc-50`}
       >
+        <GoogleTagManager gtmId="AW-16715397426"/>
         <NavBar />
         {children}
         <Footer />
